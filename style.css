@@ -1,0 +1,152 @@
+/*Google Fonts*/
+
+@font-face {
+    font-family: 'Merryweather-Regular';
+    font-style: normal;
+    src: url("./Fonte/Merriweather/Merriweather-Regular.ttf");
+}
+
+@font-face {
+    font-family: 'Merryweather-Bold';
+    font-style: normal;
+    src: url("./Fonte/Merriweather/Merriweather-Bold.ttf");
+}
+
+@font-face {
+    font-family: 'Crimson-Pro-Regular';
+    font-style: normal;
+    src: url("./Fonte/Crimson-Pro/CrimsonPro-Regular.ttf");
+}
+
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #211E1B;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h1, h2, h3, a {
+    font-family: 'Merryweather-Bold', normal;
+}
+
+p {
+    font-family: 'Crimson-Pro-regular', normal;
+}
+
+#header-content, #main-content, #footer-content {
+    max-width: 1144px;
+    margin: 0 auto;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100dvh;
+}
+
+main {
+    flex: 1;
+}
+
+#header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: transparent;
+}
+
+#header-logo {
+    height: 100px;
+    background-color: transparent;
+    filter:invert(100%) sepia(0%) saturate(7500%) hue-rotate(70deg) brightness(99%) contrast(107%);
+}
+
+#header-list {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    color: white;
+}
+
+.pretty-button {
+    background-color: #F1B356;
+    border: 1px solid white;
+    border-radius: 8px;
+    box-shadow: rgba(213, 217, 217, .5) 0 2px 5px 0;
+    box-sizing: border-box;
+    color: #0f1111;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 13px;
+    line-height: 29px;
+    padding: 0 10px 0 11px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    vertical-align: middle;
+    width: 100px;
+}
+
+.pretty-button:hover {
+    background-color: transparent;  
+}
+
+/*dropdown*/
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+  
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: black;
+    color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/*header*/
+
+header {
+    position: sticky;
+    top: 0;
+}
+
+/*footer*/
+
+#footer-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: transparent;
+    color: black;
+    padding: 2rem;
+    text-align: center;
+}
+
+.footer-text {
+    color: #CCC4BC;
+}
