@@ -13,9 +13,14 @@
 }
 
 @font-face {
-    font-family: 'Crimson-Pro-Regular';
+    font-family: 'Crimson-Pro-regular';
     font-style: normal;
-    src: url("./Fonte/Crimson-Pro/CrimsonPro-Regular.ttf");
+    src: url("./Fonte/Crimson_Pro/static/CrimsonPro-Regular.ttf");
+
+}
+
+body::-webkit-scrollbar {
+    display: none;
 }
 
 
@@ -46,10 +51,6 @@ p {
     font-family: 'Crimson-Pro-regular', normal;
 }
 
-#header-content, #main-content, #footer-content {
-    max-width: 1144px;
-    margin: 0 auto;
-}
 
 #container {
     display: flex;
@@ -123,6 +124,7 @@ main {
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     padding: 12px 16px;
     z-index: 1;
+    margin-top: 5px;
 }
 
 .dropdown:hover .dropdown-content {
@@ -134,19 +136,62 @@ main {
 header {
     position: sticky;
     top: 0;
+    z-index: 1;
 }
+
+/*arrow*/
+.arrow {
+    margin-left: 5px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+  }
+
+  .down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+  }
 
 /*footer*/
 
 #footer-content {
+    height: 40dvh;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     background-color: transparent;
     color: black;
-    padding: 2rem;
+    padding: 5rem;
     text-align: center;
 }
 
 .footer-text {
     color: #CCC4BC;
+}
+
+/*main*/
+
+#main-div-1 {
+    height: 100dvh;
+    background-image: url('./mainsite-waiter.jpg');
+    background-size: cover;
+    filter: brightness(60%);
+}
+
+#main-content {
+    color: white;
+}
+
+#main-div-2 {
+    height: 100dvh;
+    background-image: url('./mainsite-food.jpg');
+    background-size: cover;
+    filter: brightness(60%);
+}
+
+#main-div-3 {
+    height: 100dvh;
+    background-image: url('./mainSite-interior01.jpg');
+    background-size: cover;
+    filter: brightness(60%);
 }
