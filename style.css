@@ -195,3 +195,13 @@ header {
     background-size: cover;
     filter: brightness(60%);
 }
+
+/*menu*/
+
+.menu-container {
+    height: 100dvh;
+}
+
+.menu-container > * {
+    color: white;
+}
