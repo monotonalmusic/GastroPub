@@ -6,6 +6,7 @@ async function fetchMenu() {
         }
 
         const data = await response.json();
+
         data.forEach(item => {
             let menuItem = document.createElement("div");
             menuItem.classList.add("menu-item");
@@ -14,8 +15,8 @@ async function fetchMenu() {
                 <p class="item-ingredients">${item.ingredients}</p>
                 <p class="item-price">${item.price}</p>
             `;
-            document.body.appendChild(menuItem);
-
+            let main = document.getElementById('main-div');
+            main.append(menuItem);
 
             console.log(item);
         });

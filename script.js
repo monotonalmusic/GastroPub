@@ -1,12 +1,12 @@
-const container = document.getElementById("container");
-
 function makeHeader () {
+    let container = document.getElementById("container"); // Add this line to get the container element
+    if (!container) console.log('container not found'); // Add this line to check if the container element exists
     let header = document.createElement("header");
     header.id = "header-div";
     header.innerHTML = 
     `
         <div id="header-content">
-            <img id="header-logo" src="gastro-pub.svg">
+            <a href="index.html"><img id="header-logo" src="gastro-pub.svg"></a>
             <nav id="header-nav">
                 <ul id="header-list">
                     <div class="dropdown">
@@ -24,10 +24,13 @@ function makeHeader () {
             </nav>
         </div>
     `;
-    container.appendChild(header);
+    container.prepend(header);
 };
 
+
 function makeFooter () {
+    let container = document.getElementById("container"); // Add this line to get the container element
+    if (!container) console.log("container not found"); // Add this line to check if the container element exists
     let footer = document.createElement("footer");
     footer.id = "footer-div";
     footer.innerHTML = 
@@ -52,7 +55,7 @@ function makeFooter () {
             </div>
         </div>
     `;
-    container.appendChild(footer);
+    container.append(footer);
 
 };
 

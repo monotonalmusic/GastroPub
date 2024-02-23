@@ -66,6 +66,7 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    align-content: center;
     padding: 1rem;
     background-color: transparent;
 }
@@ -82,6 +83,7 @@ main {
     gap: 1rem;
     color: white;
 }
+
 
 .pretty-button {
     background-color: #F1B356;
@@ -106,6 +108,7 @@ main {
 
 .pretty-button:hover {
     background-color: transparent;  
+    color: white;
 }
 
 /*dropdown*/
@@ -198,10 +201,26 @@ header {
 
 /*menu*/
 
-.menu-container {
-    height: 100dvh;
+
+.item-name {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-align: center;
 }
 
-.menu-container > * {
+.item-ingredients {
     color: white;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.item-price {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-align: center;
 }
