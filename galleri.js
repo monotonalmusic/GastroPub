@@ -6,11 +6,10 @@ async function makeGallery () {
         }
         const data = await response.json();
         let sortedData = data.slice(13, 20)
+        let startImg = sortedData[0].url;
         let galleryDiv = document.querySelector(".gallery-div");
-        let galleryTop = document.createElement("div");
-        let galleryMain = document.createElement("div");
-        galleryTop.classList.add("gallery-top");
-        galleryMain.classList.add("gallery-main");
+        let galleryTop = document.querySelector(".gallery-top");
+        let galleryMain = document.querySelector(".gallery-main");
         galleryDiv.append(galleryTop);
         galleryDiv.prepend(galleryMain);
         sortedData.forEach(item => {
