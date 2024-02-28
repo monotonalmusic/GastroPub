@@ -1,12 +1,8 @@
+import data from "./fetch.js";
+
 async function makeGallery () {
-    try {
-        const response = await fetch ("https://gastropub.webexam-mcdm.dk/api/images");
-        if (!response.ok) {
-            throw new Error("Network response was not ok");
-        }
-        const data = await response.json();
-        let sortedData = data.slice(13, 20)
-        let startImg = sortedData[0].url;
+        let gallery = await data.fetch("https://gastropub.webexam-mcdm.dk/api/images");
+        let sortedData = gallery.slice(13, 20)
         let galleryDiv = document.querySelector(".gallery-div");
         let galleryTop = document.querySelector(".gallery-top");
         let galleryMain = document.querySelector(".gallery-main");
@@ -34,11 +30,6 @@ async function makeGallery () {
             console.log(item);
         });
 
-
-    } 
-    catch (error) {
-        console.log(error);
-    }
 }
 
 makeGallery();

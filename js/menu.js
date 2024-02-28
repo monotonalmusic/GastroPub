@@ -1,13 +1,8 @@
+import data from "./fetch.js";
+
 async function fetchMenu() {
-    try {
-        const response = await fetch("https://gastropub.webexam-mcdm.dk/api/menus");
-        if (!response.ok) {
-            throw new Error("Network response was not ok");
-        }
-
-        const data = await response.json();
-
-        data.forEach(item => {
+        let menu = await data.fetch("https://gastropub.webexam-mcdm.dk/api/menus");
+        menu.forEach(item => {
             let menuItem = document.createElement("div");
             menuItem.classList.add("menu-item");
             menuItem.innerHTML = `
@@ -17,15 +12,9 @@ async function fetchMenu() {
             `;
             let main = document.getElementById('main-div');
             main.append(menuItem);
-
             console.log(item);
         });
 
-    }
-    catch (error) {
-        console.log(error);
-    }
-    
 }
 
 fetchMenu();
